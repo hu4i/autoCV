@@ -1,0 +1,304 @@
+%-----------------------------------------------------------------------------------------------------------------------------------------------%
+%	The MIT License (MIT)
+%
+%	Copyright (c) 2021 Jitin Nair
+%
+%	Permission is hereby granted, free of charge, to any person obtaining a copy
+%	of this software and associated documentation files (the "Software"), to deal
+%	in the Software without restriction, including without limitation the rights
+%	to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+%	copies of the Software, and to permit persons to whom the Software is
+%	furnished to do so, subject to the following conditions:
+%	
+%	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+%	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+%	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+%	AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+%	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+%	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+%	THE SOFTWARE.
+%	
+%
+%-----------------------------------------------------------------------------------------------------------------------------------------------%
+
+%----------------------------------------------------------------------------------------
+%	DOCUMENT DEFINITION
+%----------------------------------------------------------------------------------------
+
+% article class because we want to fully customize the page and not use a cv template
+\documentclass[a4paper,12pt]{article}
+
+%----------------------------------------------------------------------------------------
+%	FONT
+%----------------------------------------------------------------------------------------
+
+% % fontspec allows you to use TTF/OTF fonts directly
+% \usepackage{fontspec}
+% \defaultfontfeatures{Ligatures=TeX}
+
+% % modified for ShareLaTeX use
+% \setmainfont[
+% SmallCapsFont = Fontin-SmallCaps.otf,
+% BoldFont = Fontin-Bold.otf,
+% ItalicFont = Fontin-Italic.otf
+% ]
+% {Fontin.otf}
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES
+%----------------------------------------------------------------------------------------
+\usepackage{url}
+\usepackage{parskip} 	
+
+%other packages for formatting
+\RequirePackage{color}
+\RequirePackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[scale=0.9]{geometry}
+
+%tabularx environment
+\usepackage{tabularx}
+
+%for lists within experience section
+\usepackage{enumitem}
+
+% centered version of 'X' col. type
+\newcolumntype{C}{>{\centering\arraybackslash}X} 
+
+%to prevent spillover of tabular into next pages
+\usepackage{supertabular}
+\usepackage{tabularx}
+\newlength{\fullcollw}
+\setlength{\fullcollw}{0.47\textwidth}
+
+%custom \section
+\usepackage{titlesec}				
+\usepackage{multicol}
+\usepackage{multirow}
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{10pt}{10pt}
+
+%for publications
+\usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
+
+%Setup hyperref package, and colours for links
+\usepackage[unicode, draft=false]{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
+\addbibresource{citations.bib}
+\setlength\bibitemsep{1em}
+
+%for social icons
+\usepackage{fontawesome5}
+
+%debug page outer frames
+%\usepackage{showframe}
+
+%----------------------------------------------------------------------------------------
+%	BEGIN DOCUMENT
+%----------------------------------------------------------------------------------------
+\begin{document}
+
+% non-numbered pages
+\pagestyle{empty} 
+
+%----------------------------------------------------------------------------------------
+%	TITLE
+%----------------------------------------------------------------------------------------
+
+% \begin{tabularx}{\linewidth}{ @{}X X@{} }
+% \huge{Your Name}\vspace{2pt} & \hfill \emoji{incoming-envelope} email@email.com \\
+% \raisebox{-0.05\height}\faGithub\ username \ | \
+% \raisebox{-0.00\height}\faLinkedin\ username \ | \ \raisebox{-0.05\height}\faGlobe \ mysite.com  & \hfill \emoji{calling} number
+% \end{tabularx}
+
+\begin{tabularx}{\linewidth}{@{} C @{}}
+\Huge{Wei Li} \\[7.5pt]
+% \href{https://github.com/username}{\raisebox{-0.05\height}\faGithub\ username} \ $|$ \ 
+% \href{https://linkedin.com/in/username}{\raisebox{-0.05\height}\faLinkedin\ username} \ $|$ \ 
+% \href{https://mysite.com}{\raisebox{-0.05\height}\faGlobe \ mysite.com} \ $|$ \ 
+% \href{mailto:email@mysite.com}{\raisebox{-0.05\height}\faEnvelope \ email@mysite.com} \ $|$ \ 
+% \href{tel:+000000000000}{\raisebox{-0.05\height}\faMobile \ +00.00.000.000} \\
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+% EXPERIENCE SECTIONS
+%----------------------------------------------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+%   Summary 
+%----------------------------------------------------------------------------------------
+\section{Summary}
+I am Wei Li, an exam-exempted master’s student who majors in cyberspace security at \href{https://ceen.xidian.edu.cn/}{School of Cyber Engineering}, \href{https://en.xidian.edu.cn/}{Xidian University} (XDU), China. I’m a former \href{https://en.wikipedia.org/wiki/Capture_the_flag_(cybersecurity)}{CTF} player in \href{https://l.xdsec.org/}{L-team} and \href{https://xdsec.org/}{XDSEC}. My research interest falls in securing software systems via formal methods.
+
+During my undergraduate education, I mostly focused on CTF competitions and extracurricular activities of the information security club XDSEC. By self-study and cooperation with my teammates, I have been granted a postgraduate recommendation due to my performance in information security-related competitions.
+
+I’m currently teaching myself in the area of program logic and its related background knowledge.
+
+%----------------------------------------------------------------------------------------
+%   Informantion
+%----------------------------------------------------------------------------------------
+
+\section{Information}
+
+\begin{tabularx}{\linewidth}{ @{}l }
+\textbf{Email}: {wei.li@stu.xidian.edu.cn}\\
+\textbf{Mobile}: {(+86) 189XXXXXXXX}\\
+\textbf{Estimated Graduation Date}: {June 2024}\\
+\textbf{Address}: {No. 266, Xinglong Section of Xifeng Road, Xi’an, Shaanxi, 710126, P. R. China}\\
+
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+\section{Education}
+\begin{tabularx}{\linewidth}{@{}l X@{}}	
+
+2021 - present & \textbf{M.Eng.}, Xidian University (XDU),  Xi’an, Shaanxi, China \\ 
+    & \textbf{Major}: Cyberspace Security, School of Cyber Engineering \\
+2017 - 2021 & \textbf{B.Eng.}, Xidian University (XDU),  Xi’an, Shaanxi, China \\ 
+    & \textbf{Major}: Cyberspace Security (Experimental), School of Cyber Engineering \\
+
+
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%	SELECTED AWARDS
+%----------------------------------------------------------------------------------------
+\section{SELECTED AWARDS}
+\begin{tabularx}{\linewidth}{@{}l X@{}}	
+
+2019 & National College Student Information Security Contest — Works Competition \hfill{\textbf{First prize}} \\
+2019 & DEFCON CHINA 2019 Final \hfill{\textbf{5th}} \\
+2019 & TCTF 2019 Final (Student category) \hfill{\textbf{3rd}} \\
+2019 & WCTF 2019 (Student category) \hfill{\textbf{7h}} \\
+...
+
+\end{tabularx}
+
+
+%----------------------------------------------------------------------------------------
+%	Teaching
+%----------------------------------------------------------------------------------------
+\section{Teaching}
+\begin{tabularx}{\linewidth}{@{}l X@{}}	
+
+Sept 2021 – Dec 2021 & Digital Logic Circuit Analysis and Design, XDU \hfill{\textbf{Teaching assistant}} \\
+Mar 2023 – Jun 2023 & Modern Cryptography, XDU \hfill{\textbf{Teaching assistant}} \\
+Sept 2020 - Dec 2022 & Competition Training Base of Cyber Security, XDU \hfill{\textbf{Teaching assistant}} \\
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%	PUBLICATIONS
+%----------------------------------------------------------------------------------------
+% \section{Publications}
+% \begin{refsection}[citations.bib]
+% \nocite{*}
+% \printbibliography[heading=none]
+% \end{refsection}
+
+%----------------------------------------------------------------------------------------
+%	RELEVANT SERVICES
+%----------------------------------------------------------------------------------------
+\section{RELEVANT SERVICES}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+National Middle School Student Cyber Security Competition & \hfill 2021 \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+        \item[--] \textbf{Guiding Unit}: Teaching Steering Committee of Cyberspace Security Major in Higher Education Institutions of the Ministry of Education
+        \item[--] \textbf{Sponsor}: Office of Shaanxi Provincial Internet Information \& Xidian University
+        \item[--] \textbf{Role}: Sponsor’s Head of Students 
+    \end{itemize}
+    \end{minipage}
+}
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+D\^{}3CTF (A computer security competition) & \hfill 2019 \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+        \item[--] \textbf{Sponsor}: Alibaba Security Response Center 
+        \item[--] \textbf{Organizer}: Information Security Clubs in XDU, UESTC, HDU 
+        \item[--] \textbf{Role}: One of the organizers 
+    \end{itemize}
+    \end{minipage}
+}
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+Changan Cup Electronic Data Forensics Competition & \hfill 2021 \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+        \item[--] \textbf{Sponsor}: Shanghai Honglian Network Technology Co., Ltd.
+        \item[--] \textbf{Organizer}: Competition Training Base of Cyber Security, XDU
+        \item[--] \textbf{Role}: Sponsor’s Head of Students
+    \end{itemize}
+    \end{minipage}
+}
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+LCTF, MoeCTF, MiniLCTF, etc. (Computer security competitions for colleague students) & \hfill 2018-2021 \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+        \item[--] \textbf{Sponsor}: School of Cyber Engineering, XDU
+        \item[--] \textbf{Organizer}: XDSEC
+        \item[--] \textbf{Role}: One of the organizers 
+    \end{itemize}
+    \end{minipage}
+}
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%	Extracurricular Activities
+%----------------------------------------------------------------------------------------
+\section{Extracurricular Activities}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+Information Security Club of Xidian University (XDSEC) & \hfill 2017-2023 \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+        \item[--] \textbf{Member and (later) the leader of the binary department}(a department that focuses on vulnerabilities in all forms of software)
+    \end{itemize}
+    \end{minipage}
+}
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+L-team (A team that has participated in many competitions involving cyber security) & \hfill 2018-2021 \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+        \item[--] \textbf{Member of the binary branch}(a branch that focuses on vulnerabilities in all forms of software)
+    \end{itemize}
+    \end{minipage}
+}
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+    Contribution to a book named CTF-All-In-One (Pwn) \\[3.75pt]
+    \multicolumn{2}{@{}X@{}}{
+    \begin{minipage}[t]{\linewidth}
+        \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+            \item[--] \textbf{ISBN}: 9787121399527
+            \item[--] \textbf{Contribution}: I wrote the analysis of malloc and free in ptmalloc (a memory management library adopted by glibc)
+            \item[--] \textbf{Acknowledged by the writer} in the preface of the book
+        \end{itemize}
+        \end{minipage}
+    }
+    \end{tabularx}
+
+\vfill
+\center{\footnotesize Last updated: \today}
+
+\end{document}
